@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\PycharmProjects\stepik\selenium_env"
+$env:VIRTUAL_ENV="C:\PycharmProjects\stepik-master\selenium_env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

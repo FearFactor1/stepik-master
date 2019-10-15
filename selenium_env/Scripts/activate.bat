@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\PycharmProjects\stepik\selenium_env"
+set "VIRTUAL_ENV=C:\PycharmProjects\stepik-master\selenium_env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
