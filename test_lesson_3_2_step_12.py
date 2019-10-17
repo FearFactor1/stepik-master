@@ -7,7 +7,7 @@ from selenium import webdriver
 link1 = "http://suninjuly.github.io/registration1.html"
 link2 = "http://suninjuly.github.io/registration2.html"
 
-class TestUn(unittest.TestCase):
+class test_Un(unittest.TestCase):
     def test_un1(self):
         browser = webdriver.Chrome()
         browser.get(link1)
@@ -28,8 +28,8 @@ class TestUn(unittest.TestCase):
         #self.assertEqual(browser.find_element_by_tag_name("h1").text, "Congratulations! You have successfully registered!")
         assert "Congratulations! You have successfully registered!" == welcome_text
 
-    if __name__ == "__main__":
-        unittest.main()
+        if __name__ == "__main__":
+            unittest.main()
 
 
 
@@ -54,8 +54,8 @@ class TestUn(unittest.TestCase):
         assert "Congratulations! You have successfully registered!" == welcome_text
 
 
-    if __name__ == "__main__":
-        unittest.main()
+        if __name__ == "__main__":
+            unittest.main()
 
 
 
