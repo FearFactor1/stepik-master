@@ -10,7 +10,8 @@ class AddInBasket(BasePage):
 
     def AssertFinishText(self):
         name = self.browser.find_element(*ProductPageLocators.FINISH_TEXT).text
-        assert "The shellcoder's handbook был добавлен в вашу корзину." in name
+        name2 = self.browser.find_element(*ProductPageLocators.PRODUCT_TEXT).text
+        assert name == name2
         price_basket = self.browser.find_element(*ProductPageLocators.PRICE_BASKET).text
         price_product = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT).text
-        assert "9,99 £" in price_basket and price_product
+        assert price_basket == price_product
