@@ -1,7 +1,6 @@
 from pages.product_page import AddInBasket
 from pages.base_page import BasePage
 import pytest
-import time
 
 
 @pytest.mark.xfail
@@ -13,5 +12,4 @@ def test_guest_can_add_product_to_basket(browser, offers):
     pages.add_in_basket()
     base_page = BasePage(browser, link)
     base_page.solve_quiz_and_get_code()
-    time.sleep(10)
     pages.AssertFinishText()
