@@ -1,5 +1,4 @@
 from pages.product_page import AddInBasket
-from pages.base_page import BasePage
 
 
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):

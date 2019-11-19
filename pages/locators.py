@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+#class MainPageLocators():
+#    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class LoginPageLocators():
     REGISTER_EMAIL_ADDRESS = (By.CSS_SELECTOR, "#id_registration-email")
@@ -18,5 +18,6 @@ class ProductPageLocators():
     PRICE_BASKET = (By.CSS_SELECTOR, "#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) > strong")
     PRICE_PRODUCT = (By.CSS_SELECTOR, "p.price_color")
 
-
-#add_to_basket_form > button
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
