@@ -22,3 +22,4 @@ class AddInBasket(BasePage):
 
     def IsDisappeared(self):
         assert self.is_disappeared(*ProductPageLocators.FINISH_TEXT)
+
