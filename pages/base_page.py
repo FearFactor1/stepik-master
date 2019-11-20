@@ -63,3 +63,11 @@ class BasePage():
     def go_to_look_basket(self):
         look_basket = self.browser.find_element(*BasePageLocators.LOOK_BASKET_BUTTON)
         look_basket.click()
+
+    def enter_or_authorized(self):
+        go_login = self.browser.find_element(*BasePageLocators.ENTER)
+        go_login.click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"

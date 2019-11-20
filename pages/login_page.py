@@ -1,7 +1,10 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
 from selenium.webdriver.common.by import By
+from .locators import BasePageLocators
+import time
 
+emails = str(time.time()) + "@fakemail.org"
 
 class LoginPage(BasePage, LoginPageLocators):
     def should_be_login_page(self):
@@ -24,3 +27,9 @@ class LoginPage(BasePage, LoginPageLocators):
         assert self.is_element_present(By.CSS_SELECTOR, "#id_registration-password1")
         assert self.is_element_present(By.CSS_SELECTOR, "#id_registration-password2")
         assert True
+
+    def register_new_user(self, email, password):
+        email = self.is_element_present(*BasePageLocators.EMAIL_REGISTRATION)
+        email.send_keys(emails)
+        password = self.is_element_present(*BasePageLocators.PASSWORD_REGISTRATION)
+        password.send_keys("Fdv46hjlu")

@@ -20,3 +20,8 @@ class BasePageLocators():
     LOOK_BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group > a:nth-child(1)")
     TEXT_IN_BASKET = (By.CSS_SELECTOR, "#content_inner > p:nth-child(1)")
     PRODUCTS_LINK = (By.CSS_SELECTOR, ".dropdown > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)")
+    EMAIL_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-email")
+    PASSWORD_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-password1")
+    REPEAT_PASSWORD_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-password2")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    ENTER = (By.CSS_SELECTOR, "#login_link")
